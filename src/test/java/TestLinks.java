@@ -40,7 +40,7 @@ public class TestLinks {
             SimpleDateFormat dateNowFormat = new SimpleDateFormat("dd.MM.yyyy ' ' hh:mm:ss a zzz");
 
 
-            if ((driver.getTitle().contains("404")) || (driver.getTitle().contains("500"))) {
+            if ((driver.getTitle().contains("403")) || (driver.getTitle().contains("404")) || (driver.getTitle().contains("500")) || (driver.getTitle().contains("502")) || (driver.getTitle().contains("503"))) {
 
 
 
@@ -62,7 +62,7 @@ public class TestLinks {
             WebElement link2 = driver.findElement(By.xpath("//a[@class='icon-live']"));
             link2.click();
 
-            if ((driver.getTitle().contains("404")) || (driver.getTitle().contains("500"))) {
+            if ((driver.getTitle().contains("403")) || (driver.getTitle().contains("404")) || (driver.getTitle().contains("500")) || (driver.getTitle().contains("502")) || (driver.getTitle().contains("503"))) {
 
                 Logs logs1 = driver.manage().logs();
                 LogEntries logEntries1 = logs1.get(LogType.BROWSER);
